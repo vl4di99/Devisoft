@@ -1,40 +1,40 @@
-import Image from "next/image";
-import React, { useContext, useEffect, useState } from "react";
-import logo from "../images/Devisoft_Title_Transparent.png";
+import Image from "next/image"
+import React, { useContext, useEffect, useState } from "react"
+import logo from "../images/Devisoft_Title_Transparent.png"
 import {
-	MainDiv,
-	NavbarListLI,
-	NavbarListUL,
-	SecondaryDiv,
-} from "./TailwindSC/Styled";
-import { ThemeContext } from "./Context";
+    MainDiv,
+    NavbarListLI,
+    NavbarListUL,
+    SecondaryDiv,
+} from "./TailwindSC/Styled"
+import { ThemeContext } from "./Context"
 
 const Header = () => {
-	const { darkMode, emoji, changeTheme } = useContext(ThemeContext);
+    const { darkMode, emoji, changeTheme } = useContext(ThemeContext)
 
-	return (
-		<MainDiv dark={darkMode}>
-			<SecondaryDiv>
-				<Image src={logo} alt="LOGO" width={200} height={200} />
-			</SecondaryDiv>
+    return (
+        <MainDiv dark={darkMode}>
+            <SecondaryDiv>
+                <Image src={logo} alt="LOGO" width={200} height={200} />
+            </SecondaryDiv>
 
-			<SecondaryDiv>
-				<SecondaryDiv>
-					<NavbarListUL>
-					<NavbarListLI>Home</NavbarListLI>
-						<NavbarListLI>About</NavbarListLI>
-						<NavbarListLI>Our work</NavbarListLI>
-						<NavbarListLI>Contact</NavbarListLI>
-					</NavbarListUL>
-				</SecondaryDiv>
-				<SecondaryDiv>
-					<button onClick={changeTheme} className="cursor-pointer">
-						{emoji}
-					</button>
-				</SecondaryDiv>
-			</SecondaryDiv>
-		</MainDiv>
-	);
-};
+            <SecondaryDiv>
+                <SecondaryDiv>
+                    <NavbarListUL>
+                        <NavbarListLI>Home</NavbarListLI>
+                        <NavbarListLI>About</NavbarListLI>
+                        <NavbarListLI>Our work</NavbarListLI>
+                        <NavbarListLI>Contact</NavbarListLI>
+                    </NavbarListUL>
+                </SecondaryDiv>
+                <SecondaryDiv>
+                    <button onClick={changeTheme} className="cursor-pointer">
+                        {emoji}
+                    </button>
+                </SecondaryDiv>
+            </SecondaryDiv>
+        </MainDiv>
+    )
+}
 
-export default Header;
+export default Header

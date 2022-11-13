@@ -13,5 +13,5 @@ export const lightPalette = {
 };
 
 export const darkPalette = {
-	darkGray: "bg-slate-800",
-};
+    darkGray: "bg-slate-800",
+}
