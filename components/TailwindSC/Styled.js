@@ -1,5 +1,5 @@
 import tw from "tailwind-styled-components";
-import Colors from "./Colors";
+import { lightPalette, darkPalette } from "./Colors";
 
 export const Container = tw.div`
 flex flex-col min-h-screen w-screen
@@ -7,8 +7,7 @@ flex flex-col min-h-screen w-screen
 
 export const MainDiv = tw.div`
    flex flex-row justify-between mx-4 rounded-3xl p-2 px-4 my-2
-   ${(props) =>
-		props.dark ? `bg-${Colors.darkGray}` : `bg-${Colors.lightGray}`}
+   ${(p) => (p.dark ? darkPalette.darkGray : lightPalette.lightGray)}
 `;
 
 export const SecondaryDiv = tw.div`

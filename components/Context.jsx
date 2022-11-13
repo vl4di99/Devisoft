@@ -1,25 +1,30 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useEffect, useState } from "react";
 
 const ThemeContext = createContext();
 
 export default function ThemeProvider({ children }) {
 	const [darkMode, setDarkMode] = useState(false);
 	const [emoji, setEmoji] = useState("🌞");
+	const [mounted, setMounted] = useState(false);
 
 	const changeTheme = () => {
-		if (!darkMode) {
+		if (darkMode) {
 			setDarkMode(false);
-			setEmoji("🌙");
+			setEmoji("🌞");
 		} else {
 			setDarkMode(true);
-			setEmoji("🌞");
+			setEmoji("🌙");
 		}
 	};
-	return (
-		<ThemeContext.Provider value={{ emoji, darkMode, changeTheme }}>
-			{children}
-		</ThemeContext.Provider>
-	);
+
+	useEffect(() => setMounted(true), []);
+	if (mounted) {
+		return (
+			<ThemeContext.Provider value={{ emoji, darkMode, changeTheme }}>
+				{children}
+			</ThemeContext.Provider>
+		);
+	} else return null;
 }
 
 export { ThemeContext };

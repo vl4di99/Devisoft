@@ -11,6 +11,7 @@ import { ThemeContext } from "./Context";
 
 const Header = () => {
 	const { darkMode, emoji, changeTheme } = useContext(ThemeContext);
+
 	return (
 		<MainDiv dark={darkMode}>
 			<SecondaryDiv>
@@ -24,7 +25,7 @@ const Header = () => {
 						<NavbarListLI>Contact</NavbarListLI>
 					</NavbarListUL>
 				</SecondaryDiv>
-				<SecondaryDiv className="flex self-end">
+				<SecondaryDiv>
 					<button onClick={changeTheme} className="cursor-pointer">
 						{emoji}
 					</button>
