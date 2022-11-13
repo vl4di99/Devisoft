@@ -9,6 +9,7 @@ export const lightPalette = {
 	lightBeige: "#eee",
 	hotRed: "#ff3046",
 	darkBrown: "rgba(34, 25, 25, 0.1)",
+	mint: "#C1E1D2",
 };
 
 export const darkPalette = {
