@@ -21,7 +21,9 @@ const Header = () => {
 			<SecondaryDiv>
 				<SecondaryDiv>
 					<NavbarListUL>
+					<NavbarListLI>Home</NavbarListLI>
 						<NavbarListLI>About</NavbarListLI>
+						<NavbarListLI>Our work</NavbarListLI>
 						<NavbarListLI>Contact</NavbarListLI>
 					</NavbarListUL>
 				</SecondaryDiv>
