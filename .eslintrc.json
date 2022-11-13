@@ -1,3 +1,27 @@
 {
-  "extends": "next/core-web-vitals"
+    "env": {
+        "browser": true,
+        "es2021": true,
+        "node": true
+    },
+    "parser": "@typescript-eslint/parser",
+    "extends": [
+        "next/core-web-vitals",
+        "airbnb/base",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:import/errors",
+        "plugin:import/warnings",
+        "plugin:import/typescript",
+        "prettier"
+    ],
+    "plugins": ["prettier"],
+    "overrides": [
+    ],
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "rules": {
+       // "prefer-const": "off" // Turn rule off typescript-eslint/recommended
+    }
 }
